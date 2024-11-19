@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-background1 {
+  background-image: url('/images/background1.svg');
+}
+
+.bg-background2 {
+  background-image: url('/images/background2.svg');
+}
+
+.bg-background3 {
+  background-image: url('/images/background3.svg');
+}
+
+.bg-background4 {
+  background-image: url('/images/background4.svg');
+}
+
+.bg-background5 {
+  background-image: url('/images/background5.svg');
+}
+
+.bg-background6 {
+  background-image: url('/images/background6.svg');
+}
