@@ -18,14 +18,15 @@ export default function Home() {
         size={80}
         direction="right"
       />
-      <div className="flex flex-col items-center justify-center gap-12">
+
+      <div className="flex flex-col  items-center justify-center gap-12">
         <div className="bg-[#151515] backdrop-blur-sm bg-opacity-90 flex flex-col px-14 py-4 gap-5 items-center justify-center shadow-custom">
           <HeaderTitle />
           <CountdownTimer />
         </div>
         <TrailerPreview />
-        <Footer />
       </div>
+      <Footer />
     </BackgroundWrapper>
   )
 }
