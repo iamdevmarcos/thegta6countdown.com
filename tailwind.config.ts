@@ -14,6 +14,10 @@ export default {
       },
       fontFamily: {
         pricedown: ['Pricedown', 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'sans-serif'],
+      },
+      letterSpacing: {
+        tightest: '-0.05em',
       },
       backgroundImage: {
         'main-gradient': 'linear-gradient(to bottom, #FFBF76, #B11778)',

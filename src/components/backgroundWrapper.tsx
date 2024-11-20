@@ -16,20 +16,26 @@ interface BackgroundWrapperProps {
 }
 
 export function BackgroundWrapper({ children }: BackgroundWrapperProps) {
-  const [currentBg, setCurrentBg] = useState('background1')
+  const [currentBg, setCurrentBg] = useState('background2')
+  const twentySeconds = 20000
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const newBg = backgrounds[Math.floor(Math.random() * backgrounds.length)]
-      setCurrentBg(newBg)
-    }, 3000)
+      setCurrentBg((prev) => {
+        let newBg
+        do {
+          newBg = backgrounds[Math.floor(Math.random() * backgrounds.length)]
+        } while (newBg === prev)
+        return newBg
+      })
+    }, twentySeconds)
 
     return () => clearInterval(interval)
   }, [])
 
   return (
     <div
-      className={`bg-${currentBg} bg-cover bg-center bg-no-repeat h-screen flex-col flex items-center justify-center transition-all duration-1000 ease-linear`}
+      className={`bg-${currentBg} bg-cover bg-center bg-no-repeat h-screen flex flex-col items-center justify-center transition-background duration-1000 ease-linear`}
     >
       {children}
     </div>
