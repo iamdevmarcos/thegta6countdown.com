@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Pricedown';
+  src: url('/fonts/pricedown_black.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }

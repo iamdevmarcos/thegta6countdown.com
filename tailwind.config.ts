@@ -1,18 +1,25 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 export default {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      boxShadow: {
+        custom: '10px 10px 0px 2px rgba(0, 0, 0, 0.30)',
+        secondary: '5px 5px 0px 0px rgba(0, 0, 0, 0.30)',
+      },
+      fontFamily: {
+        pricedown: ['Pricedown', 'sans-serif'],
+      },
+      backgroundImage: {
+        'main-gradient': 'linear-gradient(to bottom, #FFBF76, #B11778)',
+        'secondary-gradient': 'linear-gradient(to bottom, #ffbf76, #f49143)',
       },
     },
   },
   plugins: [],
-} satisfies Config;
+} satisfies Config
