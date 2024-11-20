@@ -14,7 +14,7 @@ export default {
       },
       fontFamily: {
         pricedown: ['Pricedown', 'sans-serif'],
-        poppins: ['var(--font-poppins)', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       letterSpacing: {
         tightest: '-0.05em',
