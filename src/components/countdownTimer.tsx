@@ -1,9 +1,9 @@
-"use client";
+'use client'
 
-import { useTimer } from "@/contexts/timerContext";
+import { useTimer } from '@/contexts/timerContext'
 
 export const CountdownTimer = () => {
-  const { timeUnits } = useTimer();
+  const { timeUnits } = useTimer()
 
   return (
     <div className="flex justify-center items-center space-x-8 pb-6">
@@ -18,5 +18,5 @@ export const CountdownTimer = () => {
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
