@@ -35,7 +35,7 @@ export function BackgroundWrapper({ children }: BackgroundWrapperProps) {
 
   return (
     <div
-      className={`bg-${currentBg} bg-cover bg-center bg-no-repeat min-h-screen flex flex-col items-center justify-between transition-background duration-1000 ease-linear gap-8`}
+      className={`bg-${currentBg} bg-cover bg-center bg-no-repeat min-h-screen flex flex-col items-center justify-between transition-background duration-1000 ease-linear gap-8 p-4`}
     >
       {children}
     </div>

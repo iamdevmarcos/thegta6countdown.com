@@ -1,6 +1,7 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState, useMemo } from 'react'
+import { useScreenSize } from '@/hooks/useScreenSize'
 
 interface TimeUnit {
   label: string
@@ -18,6 +19,8 @@ interface TimerProviderProps {
 const TimerContext = createContext<TimerContextType | undefined>(undefined)
 
 export const TimerProvider = ({ children }: TimerProviderProps) => {
+  const { isMobile, isTablet } = useScreenSize({})
+
   const SECONDS_IN_MINUTE = 60
   const MINUTES_IN_HOUR = 60
   const HOURS_IN_DAY = 24
@@ -54,9 +57,24 @@ export const TimerProvider = ({ children }: TimerProviderProps) => {
   const seconds = timeLeft % SECONDS_IN_MINUTE
 
   const timeUnits: TimeUnit[] = [
-    { label: 'Days', value: `${String(days).padStart(2, '0')} :` },
-    { label: 'Hours', value: `${String(hours).padStart(2, '0')} :` },
-    { label: 'Minutes', value: `${String(minutes).padStart(2, '0')} :` },
+    {
+      label: 'Days',
+      value: `${String(days).padStart(2, '0')}${
+        isMobile || isTablet ? '' : ' :'
+      }`,
+    },
+    {
+      label: 'Hours',
+      value: `${String(hours).padStart(2, '0')}${
+        isMobile || isTablet ? '' : ' :'
+      }`,
+    },
+    {
+      label: 'Minutes',
+      value: `${String(minutes).padStart(2, '0')}${
+        isMobile || isTablet ? '' : ' :'
+      }`,
+    },
     { label: 'Seconds', value: `${String(seconds).padStart(2, '0')}` },
   ]
 
